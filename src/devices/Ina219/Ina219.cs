@@ -50,7 +50,7 @@ namespace Iot.Device.Adc
         /// Method to initialize values during device construction
         /// </summary>
         /// <param name="i2cDevice">Interface to I2C device access</param>
-#if !NETCOREAPP2_1 && !NETCOREAPP3_1
+#if !NETCOREAPP2_1
         [MemberNotNull(nameof(_i2cDevice))]
 #endif
         private void Initialize(I2cDevice i2cDevice)
@@ -87,7 +87,7 @@ namespace Iot.Device.Adc
         {
             Initialize(I2cDevice.Create(settings));
             _disposeI2cDevice = true;
-#if NETCOREAPP2_1 || NETCOREAPP3_1
+#if NETCOREAPP2_1
             if (_i2cDevice is null)
             {
                 throw new ArgumentException($"{nameof(_i2cDevice)} is not configured");
