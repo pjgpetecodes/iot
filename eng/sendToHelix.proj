@@ -34,8 +34,7 @@
   <ItemGroup Condition="'$(TestOS)' == 'Windows_NT'">
     <!-- Xunit project to test -->
     <XUnitProject Include="..\src\System.Device.Gpio.Tests\System.Device.Gpio.Tests.csproj">
-      <TargetFramework>netcoreapp2.1</TargetFramework>
-      <RuntimeTargetFramework>netcoreapp2.0</RuntimeTargetFramework>
+      <TargetFramework>net5.0</TargetFramework>
     </XUnitProject>
     <!-- Target queues -->
     <HelixTargetQueue Condition="'$(HelixAccessToken)' != ''" Include="Windows.10.Arm32.IoT"/>
@@ -53,8 +52,7 @@
   <ItemGroup Condition="'$(TestOS)' == 'Unix'">
     <!-- Xunit project to test -->
     <XUnitProject Include="..\src\System.Device.Gpio.Tests\System.Device.Gpio.Tests.csproj">
-      <TargetFramework>netcoreapp2.1</TargetFramework>
-      <RuntimeTargetFramework>netcoreapp2.0</RuntimeTargetFramework>
+      <TargetFramework>net5.0</TargetFramework>
     </XUnitProject>
     <!-- Target queues -->
     <HelixTargetQueue Condition="'$(HelixAccessToken)' != ''" Include="Raspbian.9.Arm32.IoT"/>
